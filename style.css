@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: no-repeat linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 12px;
+  height: 100vh;
+}
+
+/* ---------------------------------------------- */
+/* CARD STYLES */
+/* ---------------------------------------------- */
+
+.full-box {
+  display: flex;
+  background-color: #fff;
+  max-width: 86%;
+  width: 1120px;
+  height: 550px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+}
+
+/* -------- IMAGE COLUMN ----------------------- */
+
+.img-column {
+  background: url("./images/bg-pattern-desktop.svg") no-repeat;
+  background-position: right -25% bottom 25%;
+}
+
+.woman-img {
+  position: relative;
+  top: 15%;
+  left: -17%;
+}
+
+.box-img {
+  position: relative;
+  bottom: 26%;
+  right: 20%;
+}
+
+.faq-column {
+  padding-right: 90px;
+}
+
+h1 {
+  margin: 60px 0 20px;
+}
+
+p {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.question-row {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 10px 0;
+}
