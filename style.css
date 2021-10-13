@@ -22,7 +22,7 @@ body {
   background-color: #fff;
   max-width: 86%;
   width: 1120px;
-  height: 550px;
+  height: auto;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -70,6 +70,16 @@ p {
   padding: 30px 0 15px;
 }
 
+/* -------- JS BEHAVIOR ----------------------- */
+
 .hidden {
   display: none;
+}
+
+.rotate {
+  transform: rotate(-180deg);
+}
+
+.bold {
+  font-weight: 700;
 }
