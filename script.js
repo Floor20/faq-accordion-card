@@ -16,42 +16,61 @@ const init = function () {
 init();
 
 const boldenQuestion = function () {
-  arrowList.forEach((_, index) => {
+  arrowList.forEach((arrow, index) => {
     for (const answer of answerList)
       if (answerList.indexOf(answer) === index)
         for (const question of questionList)
           if (
             answerList.indexOf(answer) === questionList.indexOf(question) &&
             !answer.classList.contains("hidden")
-          )
+          ) {
+            arrow.classList.add("rotate");
             question.classList.add("bold");
-          else if (
+          } else if (
             answerList.indexOf(answer) === questionList.indexOf(question) &&
             answer.classList.contains("hidden")
-          )
+          ) {
+            arrow.classList.remove("rotate");
             question.classList.remove("bold");
+          }
   });
 };
 
-// Hide and show answers
+//Hide and show answers (arrow)
 arrowList.forEach((image) => {
   image.addEventListener("click", function () {
-    for (let answer of answerList)
+    for (const answer of answerList)
       if (
         answerList.indexOf(answer) === arrowList.indexOf(image) &&
         answer.classList.contains("hidden")
       ) {
         answer.classList.remove("hidden");
-        image.classList.add("rotate");
-
         boldenQuestion();
       } else if (
         answerList.indexOf(answer) === arrowList.indexOf(image) &&
         !answer.classList.contains("hidden")
       ) {
-        image.classList.remove("rotate");
         answer.classList.add("hidden");
+        boldenQuestion();
+      }
+  });
+});
 
+// Hide and show answers (question)
+questionList.forEach((q) => {
+  q.addEventListener("click", function () {
+    for (const answer of answerList)
+      if (
+        answerList.indexOf(answer) === questionList.indexOf(q) &&
+        answer.classList.contains("hidden")
+      ) {
+        answer.classList.remove("hidden");
+        boldenQuestion();
+      } else if (
+        answerList.indexOf(answer) === questionList.indexOf(q) &&
+        !answer.classList.contains("hidden")
+      ) {
+        answer.classList.add("hidden");
         boldenQuestion();
       }
   });

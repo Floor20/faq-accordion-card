@@ -30,23 +30,27 @@ body {
   border-radius: 15px;
 }
 
-/* -------- IMAGE COLUMN ----------------------- */
-
-.img-column {
-  background: url("./images/bg-pattern-desktop.svg") no-repeat;
-  background-position: right -25% bottom 25%;
+.full-box:before {
+  background: url("./images/bg-pattern-desktop.svg") no-repeat -560px -280px;
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
 }
+
+/* -------- IMAGE COLUMN ----------------------- */
 
 .woman-img {
   position: relative;
   top: 15%;
-  left: -17%;
+  left: -13%;
 }
 
 .box-img {
   position: relative;
   bottom: 26%;
-  right: 20%;
+  right: 16.5%;
 }
 
 .faq-column {
@@ -70,6 +74,11 @@ p {
   padding: 30px 0 15px;
 }
 
+.faq-question:hover {
+  color: hsl(14, 88%, 65%);
+  cursor: pointer;
+}
+
 /* -------- JS BEHAVIOR ----------------------- */
 
 .hidden {
@@ -82,4 +91,40 @@ p {
 
 .bold {
   font-weight: 700;
+}
+
+/* ---------------------------------------------- */
+/* QUERIES */
+/* ---------------------------------------------- */
+
+@media only screen and (max-width: 930px) {
+  .faq-column {
+    padding-right: 30px;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .full-box {
+    flex-direction: column;
+    height: 75%;
+  }
+
+  .img-column {
+    height: 50%;
+  }
+
+  .woman-img {
+    position: absolute;
+    left: 30%;
+    top: -17%;
+    height: 200px;
+    width: auto;
+  }
+
+  .box-img {
+    position: relative;
+    top: -20%;
+    height: 30%;
+    width: auto;
+  }
 }
