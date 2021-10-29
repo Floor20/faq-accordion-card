@@ -17,15 +17,15 @@
   }
 
   .img-container:before {
-    background: url("./images/bg-pattern-desktop.svg") no-repeat;
+    background: url("../images/bg-pattern-desktop.svg") no-repeat;
     background-size: cover;
-    background-position: left -55% top 280%;
+    background-position: left -55% top 100%;
     height: 200px;
     width: 240px;
     content: "";
     position: absolute;
     left: 51%;
-    top: 50%;
+    top: 20%;
     transform: translate(-50%);
   }
 

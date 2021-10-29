@@ -31,7 +31,7 @@ body {
 }
 
 .full-box:before {
-  background: url("./images/bg-pattern-desktop.svg") no-repeat -560px -280px;
+  background: url("../images/bg-pattern-desktop.svg") no-repeat -560px -280px;
   content: "";
   height: 100%;
   width: 100%;
